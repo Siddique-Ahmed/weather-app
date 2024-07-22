@@ -27,7 +27,7 @@ function displayData(data) {
   temprature.innerHTML = `${Math.floor(data.main.temp)}<sup>°C</sup>`;
   cityName.textContent = `${data.name} ${data.sys.country}`;
   humidity.textContent = `${data.main.humidity}%`;
-  wind.textContent = `${Math.floor(data.wind)} km/h`;
+  wind.textContent = `${Math.floor(data.wind.speed)} km/h`;
   if (data.weather[0].main == "Clouds") {
     icon.src = "images/clouds.png";
   } else if (data.weather[0].main == "Clear") {
